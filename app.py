@@ -8,7 +8,7 @@ from datetime import datetime
 
 # Set up paths for timeseries data
 DATA_DIR = "timeseries_data"
-files = [f for f in os.listdir(DATA_DIR) if f.endswith('.json')]
+files = list(sorted([f for f in os.listdir(DATA_DIR) if f.endswith('.json')]))
 
 # Function to load and process JSON file into a DataFrame
 def load_timeseries(file_path):
