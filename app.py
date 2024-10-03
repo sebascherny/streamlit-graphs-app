@@ -21,7 +21,7 @@ def load_timeseries(file_path):
 # Sidebar: File selectors for two JSON files
 st.sidebar.header("Select Timeseries Files")
 file1 = st.sidebar.selectbox("Choose the first timeseries file:", files)
-file2 = st.sidebar.selectbox("Choose the second timeseries file:", files)
+file2 = st.sidebar.selectbox("Choose the second timeseries file:", files, index=1)
 
 # Load both selected files
 df1 = load_timeseries(os.path.join(DATA_DIR, file1))
